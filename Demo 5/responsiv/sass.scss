@@ -1,0 +1,66 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$whitecolor: #ffffff;
+
+//Mixins allow you to define styles that can be re-used throughout your stylesheet.
+@mixin flexible() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centeret-elements {
+  @include flexible();
+  border: 1px solid gray;
+}
+
+::ng-deep .mat-card {
+  border: 10px solid white;
+  border-top: 55px solid white;
+  border-bottom: 55px solid white;
+  border-radius: 30px !important;
+  margin: 20px;
+  background: $whitecolor;
+}
+
+.mat-card:not([class*='mat-elevation-z']) {
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: black;
+  }
+  mat-form-field {
+    .mat-hint,
+    input,
+    ::placeholder,
+    .mat-form-field-label {
+      color: lightgray;
+    }
+  }
+}
+
+button {
+  background-color: #f5f5f5;
+  color: black;
+  padding: 5px;
+  width: 400px;
+  max-width: 100%;
+}
+
+.input-style {
+  width: 400px;
+  max-width: 100%;
+}
+
+.center-div {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-form-field-label {
+  color: gray;
+}

@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>{{data.name}}</h1>
+
+<mat-list-item *ngFor="let exercises of data?.exercises; let i = index">  
+    <h2  matLine >{{exercises.name}}</h2>
+    <p  matLine >description:    {{exercises.description}}</p>
+    <p  matLine >sets:    {{exercises.sets}}</p>
+</mat-list-item>
+
+<button mat-button (click)="onNoClick()" >back</button>

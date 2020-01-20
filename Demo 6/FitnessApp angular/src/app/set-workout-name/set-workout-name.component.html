@@ -1,0 +1,19 @@
+<mat-toolbar>
+    <span>Create workout! </span>
+
+</mat-toolbar>
+
+<div class="bgimg">
+    <form class="example-form" (submit)="addWorkout($event)">
+        <div fxLayout="column" fxLayoutAlign="center center" fxLayout.lt-md="column">
+
+        <mat-card fxLayout="column" fxLayoutAlign="center center" class="parent" fxLayout.lt-md="column">
+            <mat-form-field fxLayout="row" fxLayoutAlign="center center">
+              <input matInput placeholder="Workout name" id="name"/>
+            </mat-form-field>
+          <button mat-raised-button color="primary" fxFill >add</button>
+        </mat-card>
+        </div>
+      </form>
+</div>
+

@@ -1,0 +1,11 @@
+.square {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background-color: grey;  }
+
+.picked-square {
+     text-align: center;
+     width: 100px;
+     height: 100px;
+     background-color: white;  }

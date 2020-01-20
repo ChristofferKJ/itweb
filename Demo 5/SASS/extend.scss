@@ -1,0 +1,10 @@
+.message{
+    border: 1px solid blue;
+    padding: 10px;
+    color: blue;
+}
+
+.success{
+    @extend .message;
+    border-color: green; 
+}

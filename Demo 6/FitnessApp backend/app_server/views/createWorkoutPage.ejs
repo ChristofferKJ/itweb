@@ -1,0 +1,105 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="/public/assets/workoutstyle.css" rel="stylesheet">
+
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+    <link rel="icon" href="Favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Workout</title>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" href="#"><img src="/public/assets/nav-logo.png" /></a>
+    <div class="navbar-nav">
+        <a style="color: rgb(230, 230, 0)" class="nav-item nav-link active" href="/workout">Home <span
+                class="sr-only">(current)</span></a>
+    </div>
+</nav>
+
+
+
+<!-- Editable table -->
+
+<form action="" method="post">
+    <div class="card">
+        <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Create your workout here!</h3>
+        <label for="workout" class="col-md-4 col-form-label text-md-right"> Workout Name</label>
+        <div class="col-md-6">
+            <input type="text" id="workoutname" class="form-control" name="workoutname" required
+                <% if (typeof Workoutname != 'undefined') { %> value="<%= Workoutname  %>">
+            <%} else { %>
+            value="">
+            <% } %>
+
+        </div>
+        <div class="card-body">
+            <div id="table" class="table-editable">
+                <span class="table-add float-right mb-3 mr-2"><a href="#!" class="text-success"><i
+                            class="fas fa-plus fa-2x" aria-hidden="true"></i></a></span>
+                <table class="table table-bordered table-responsive-md table-striped text-center">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Exercise</th>
+                            <th class="text-center">Set</th>
+                            <th class="text-center">Reps/Time</th>
+                            <th class="text-center">Description</th>
+                            <!-- <th class="text-center">Remove</th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% Exercises.forEach(exercise => { %>
+                        <tr>
+                            <td class="pt-3-half" contenteditable="false"><%= exercise.name %></td>
+                            <td class="pt-3-half" contenteditable="false"><%= exercise.repetitions %></td>
+                            <td class="pt-3-half" contenteditable="false"><%= exercise.sets %></td>
+                            <td class="pt-3-half" contenteditable="false"><%= exercise.description %></td>
+
+                        </tr>
+                        <% }); %>
+
+                        <tr>
+                            <td class="pt-3-half" contenteditable=" false">
+                                <input type="text" value="Exercise.." name="exercise" required />
+                            </td>
+                            <td class="pt-3-half" contenteditable="false">
+                                <input type="text" value="Reps.." name="repetitions" required />
+                            </td>
+                            <td class="pt-3-half" contenteditable="false">
+                                <input type="text" value="Sets.." name="sets" required />
+                            </td>
+                            <td class="pt-3-half" contenteditable="false">
+                                <input type="text" value="Descrip.." name="description" required />
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+                <button type="submit" name="createExercise" class="btn btn-default">
+                    Add exercise to workout
+                </button>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<!-- Editable table -->

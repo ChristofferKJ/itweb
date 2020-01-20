@@ -1,0 +1,43 @@
+body {
+    width: 99%;
+    background-image: url(/public/assets/workout-background.png);
+    background-repeat: no-repeat;
+
+}
+
+label {
+    color:  rgb(230, 230, 0);
+    font-family: 'Courier New', Courier, monospace
+}
+
+nav {
+    width: fit-content;  
+}
+
+div {
+    font-family: 'Courier New', Courier, monospace
+}
+
+#mid-box{
+    background-color: rgba(0, 0, 0, 0); 
+    border: 0;
+    width:400; 
+    margin-left: auto; 
+    margin-right: auto; 
+    margin-bottom: auto; 
+    margin-top: 60px; 
+    border-bottom-left-radius: 80px; 
+    border-top-right-radius: 80px;
+}
+
+.nav-item
+{
+    color:  rgb(230, 230, 0);
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(230,230,0);
+}
+
+
+

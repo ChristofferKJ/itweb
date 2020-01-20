@@ -1,0 +1,26 @@
+<mat-toolbar>
+    <span>LOGIN</span>
+</mat-toolbar>
+<div class="bgimg" fxLayout="column" fxLayoutAlign="space-around center"  fxLayout.lt-md="column">
+
+<mat-card class="my-card">  
+    
+    
+    <mat-card-content>
+        <form (submit)="login($event)" class="signin-form">
+            <mat-form-field class="full-width">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username" name="username" id="username">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Password</mat-label>
+                <input matInput type="password" placeholder="Password" name="password" id="password">
+            </mat-form-field>
+            <mat-card-actions>
+                    <input mat-button type="submit" value="Sign in" color="primary"/>
+                </mat-card-actions>
+        </form>
+    </mat-card-content>
+ 
+</mat-card>
+</div>

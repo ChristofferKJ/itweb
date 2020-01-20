@@ -1,0 +1,22 @@
+<mat-toolbar>
+    <span>Workout List</span>
+</mat-toolbar>
+
+<div class="bgimg" fxLayout="row" fxLayoutAlign="space-around center" fxLayout.lt-md="column">
+    <mat-card>
+
+    <mat-nav-list>
+        <mat-list-item *ngFor="let workout of Workouts[0]?.Workouts; let i = index">
+            <a  matLine >{{workout.name}}</a>
+                <button mat-icon-button (click)="openDialog(i)">
+                <mat-icon>information</mat-icon>
+            </button>
+                <button mat-icon-button (click)="deleteWorkout(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-list-item>
+    </mat-nav-list>
+</mat-card>
+
+</div>
+
